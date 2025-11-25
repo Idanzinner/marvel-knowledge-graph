@@ -1,0 +1,41 @@
+# Core LLM Frameworks
+llama-index>=0.11.20
+llama-index-core>=0.11.20
+llama-index-llms-openai>=0.2.0
+llama-index-embeddings-openai>=0.2.0
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-openai>=0.2.0
+
+# Data Processing
+pandas==2.2.3
+numpy==2.0.2
+pydantic==2.10.3
+python-dotenv==1.0.1
+
+# Graph Database (NetworkX for in-memory, Neo4j for production)
+networkx==3.4.2
+neo4j==5.25.0
+
+# API Framework
+fastapi==0.115.6
+uvicorn==0.34.0
+python-multipart==0.0.20
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+
+# Utilities
+tqdm==4.67.1
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# Optional: Caching
+# redis==5.2.1
+
+# Jupyter for notebooks
+jupyter==1.1.1
+ipykernel==6.29.5
+matplotlib==3.9.3
+seaborn==0.13.2

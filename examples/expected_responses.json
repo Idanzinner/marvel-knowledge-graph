@@ -1,0 +1,473 @@
+{
+  "description": "Expected responses for sample queries in the Marvel Knowledge Graph API",
+  "version": "1.0",
+  "responses": [
+    {
+      "query_id": 1,
+      "question": "How did Spider-Man get his powers?",
+      "expected_response": {
+        "question": "How did Spider-Man get his powers?",
+        "answer": "Spider-Man (Peter Parker) gained his powers through an accident. Specifically, he was bitten by a radioactive spider during a science exhibition. This bite gave him superhuman abilities including wall-crawling, super strength, enhanced agility, spider-sense (danger detection), and the ability to create web shooters. The radioactive spider bite fundamentally altered his genetic makeup, granting him these spider-like abilities.",
+        "query_type": "POWER_ORIGIN",
+        "characters": ["Spider-Man (Peter Parker)"],
+        "confidence_level": "UNKNOWN",
+        "context_retrieved": true
+      },
+      "validation_notes": "Answer should mention radioactive spider bite, accident origin, and list key powers"
+    },
+    {
+      "query_id": 2,
+      "question": "How did Captain America get his powers?",
+      "expected_response": {
+        "question": "How did Captain America get his powers?",
+        "answer": "Captain America (Steven Rogers) gained his powers through technology/enhancement. He received the Super-Soldier Serum, a scientific enhancement that transformed him from a frail young man to the peak of human perfection. The serum enhanced his strength, agility, endurance, and mental capabilities to superhuman levels. Combined with vita-ray treatment, this made him one of the most formidable heroes in the Marvel Universe.",
+        "query_type": "POWER_ORIGIN",
+        "characters": ["Captain America (Steven Rogers)"],
+        "confidence_level": "UNKNOWN",
+        "context_retrieved": true
+      },
+      "validation_notes": "Answer should mention Super-Soldier Serum, technology/enhancement origin, and peak human perfection"
+    },
+    {
+      "query_id": 3,
+      "question": "How did Thor get his powers?",
+      "expected_response": {
+        "question": "How did Thor get his powers?",
+        "answer": "Thor (Thor Odinson) was born with his powers as the son of Odin, making him a god by birth. As an Asgardian, he possesses divine abilities including control over thunder and lightning, superhuman strength and durability, immortality, and the ability to fly using his enchanted hammer Mjolnir. His powers are not acquired but innate to his divine nature as the God of Thunder.",
+        "query_type": "POWER_ORIGIN",
+        "characters": ["Thor (Thor Odinson)"],
+        "confidence_level": "UNKNOWN",
+        "context_retrieved": true
+      },
+      "validation_notes": "Answer should mention birth/divine origin, Asgardian heritage, and control over thunder/lightning"
+    },
+    {
+      "query_id": 4,
+      "question": "Why do Spider-Man's powers matter?",
+      "expected_response": {
+        "question": "Why do Spider-Man's powers matter?",
+        "answer": "Spider-Man's powers matter because they enable him to protect New York City from various threats. His unique combination of abilities - wall-crawling, super strength, agility, and spider-sense - make him an effective crime fighter. His spider-sense in particular gives him a unique advantage in detecting danger. Spider-Man represents the idea that anyone can be a hero and embodies the principle of 'with great power comes great responsibility.' His powers have a local to regional impact level, primarily protecting NYC but occasionally joining larger superhero teams.",
+        "query_type": "SIGNIFICANCE",
+        "characters": ["Spider-Man (Peter Parker)"],
+        "confidence_level": "UNKNOWN",
+        "context_retrieved": true
+      },
+      "validation_notes": "Answer should mention NYC protection, unique capabilities, and responsibility theme"
+    },
+    {
+      "query_id": 5,
+      "question": "What makes Thor's powers significant?",
+      "expected_response": {
+        "question": "What makes Thor's powers significant?",
+        "answer": "Thor's powers are significant because they operate at a cosmic scale. As the God of Thunder, he protects not just Earth but the entire Nine Realms from cosmic threats. His divine powers make him one of the most powerful Avengers, capable of battling gods, cosmic entities, and interdimensional threats. Thor's unique capabilities include control over weather/lightning, immortality, and immense physical strength. His powers have global to cosmic impact, making him crucial for threats that exceed human-level heroes' capabilities.",
+        "query_type": "SIGNIFICANCE",
+        "characters": ["Thor (Thor Odinson)"],
+        "confidence_level": "UNKNOWN",
+        "context_retrieved": true
+      },
+      "validation_notes": "Answer should mention cosmic scale, Nine Realms protection, and divine/god-level powers"
+    },
+    {
+      "query_id": 6,
+      "question": "Get Spider-Man's full character profile",
+      "expected_response": {
+        "character": {
+          "node_id": "character_1678",
+          "name": "Spider-Man (Peter Parker)",
+          "alignment": "Good Characters",
+          "sex": "Male Characters",
+          "alive": "Living Characters",
+          "appearances": 4043.0,
+          "first_appearance": "Aug-62",
+          "year": 1962.0
+        },
+        "power_origin": {
+          "node_id": "origin_character_1678_accident",
+          "origin_type": "accident",
+          "description": "Bitten by a radioactive spider during a science exhibition, gaining superhuman spider-like abilities",
+          "confidence": "high",
+          "evidence": "Peter Parker gained his powers after being bitten by a radioactive spider..."
+        },
+        "powers": [
+          {
+            "node_id": "power_...",
+            "name": "Wall-crawling ability",
+            "description": "Can adhere to and climb walls and surfaces"
+          },
+          {
+            "node_id": "power_...",
+            "name": "Superhuman strength and agility",
+            "description": "Enhanced physical capabilities"
+          },
+          {
+            "node_id": "power_...",
+            "name": "Spider-sense for danger detection",
+            "description": "Precognitive awareness of threats"
+          },
+          {
+            "node_id": "power_...",
+            "name": "Web-shooting technology",
+            "description": "Creates and uses web shooters"
+          }
+        ],
+        "significance": {
+          "node_id": "significance_character_1678",
+          "why_matters": "Protects New York City from crime and represents the principle of responsibility",
+          "impact_level": "local",
+          "unique_capabilities": [
+            "Wall-crawling ability",
+            "Superhuman strength and agility",
+            "Spider-sense for danger detection",
+            "Web-shooting technology"
+          ],
+          "strategic_value": "Local hero with global reach through Avengers"
+        },
+        "validation": {
+          "node_id": "validation_character_1678",
+          "is_valid": true,
+          "confidence_score": 1.0,
+          "completeness_score": 1.0,
+          "validation_notes": []
+        }
+      },
+      "validation_notes": "Response should include character node, power origin, list of powers, significance, and validation"
+    },
+    {
+      "query_id": 7,
+      "question": "Get Captain America's full character profile",
+      "expected_response": {
+        "character": {
+          "node_id": "character_1787",
+          "name": "Captain America (Steven Rogers)",
+          "alignment": "Good Characters",
+          "sex": "Male Characters",
+          "alive": "Living Characters",
+          "appearances": 3360.0,
+          "first_appearance": "Mar-41",
+          "year": 1941.0
+        },
+        "power_origin": {
+          "node_id": "origin_character_1787_technology",
+          "origin_type": "technology",
+          "description": "Enhanced by Super-Soldier Serum to peak human perfection",
+          "confidence": "high",
+          "evidence": "Human enhanced to the peak of human perfection by a Super-Soldier Serum"
+        },
+        "powers": [
+          {
+            "name": "Peak human strength, agility, and endurance",
+            "description": "Physical capabilities at the absolute limit of human potential"
+          },
+          {
+            "name": "Expert hand-to-hand combatant",
+            "description": "Master of multiple martial arts"
+          },
+          {
+            "name": "Master tactician and leader",
+            "description": "Strategic genius and team leadership"
+          }
+        ],
+        "significance": {
+          "why_matters": "Symbol of freedom and justice, leader of the Avengers",
+          "impact_level": "global",
+          "unique_capabilities": [
+            "Peak human strength, agility, and endurance",
+            "Expert hand-to-hand combatant",
+            "Master tactician and leader"
+          ]
+        }
+      },
+      "validation_notes": "Response should emphasize Super-Soldier Serum and global impact as Avengers leader"
+    },
+    {
+      "query_id": 8,
+      "question": "Get Thor's full character profile",
+      "expected_response": {
+        "character": {
+          "node_id": "character_1354",
+          "name": "Thor (Thor Odinson)",
+          "alignment": "Good Characters",
+          "sex": "Male Characters",
+          "alive": "Living Characters",
+          "appearances": 2402.0,
+          "first_appearance": "Nov-50",
+          "year": 1950.0
+        },
+        "power_origin": {
+          "node_id": "origin_character_1354_birth",
+          "origin_type": "birth",
+          "description": "Born as the son of Odin, making him a god with divine powers",
+          "confidence": "high",
+          "evidence": "Parents: Odin Borson (father, deceased) Gaea (mother / paternal great-great-aunt)"
+        },
+        "powers": [
+          {
+            "name": "Control over lightning and thunder",
+            "description": "Divine control of weather and electricity"
+          },
+          {
+            "name": "Superhuman strength and durability",
+            "description": "God-level physical capabilities"
+          },
+          {
+            "name": "Ability to fly using Mjolnir",
+            "description": "Flight through enchanted hammer"
+          },
+          {
+            "name": "Immortality as Asgardian god",
+            "description": "Extremely long lifespan"
+          }
+        ],
+        "significance": {
+          "why_matters": "Protects Earth and the Nine Realms from cosmic threats",
+          "impact_level": "cosmic",
+          "unique_capabilities": [
+            "Control over lightning and thunder",
+            "Superhuman strength and durability",
+            "Ability to fly using Mjolnir",
+            "Immortality as Asgardian god"
+          ]
+        }
+      },
+      "validation_notes": "Response should emphasize divine birth origin and cosmic impact level"
+    },
+    {
+      "query_id": 9,
+      "question": "Get Spider-Man's extraction validation report",
+      "expected_response": {
+        "character_id": "character_1678",
+        "character_name": "Spider-Man (Peter Parker)",
+        "validation_passed": true,
+        "confidence_score": 1.0,
+        "completeness_score": 1.0,
+        "semantic_similarity_score": 0.54,
+        "overall_quality": 0.815,
+        "quality_tier": "HIGH",
+        "strengths": [
+          "High confidence extraction",
+          "Complete power origin data",
+          "All fields populated",
+          "Clear evidence provided"
+        ],
+        "weaknesses": [
+          "Low semantic similarity: 0.54 (below 0.7 threshold)"
+        ],
+        "recommendations": [
+          "Consider adjusting semantic similarity threshold for production",
+          "Extraction quality is otherwise excellent"
+        ]
+      },
+      "validation_notes": "May show low semantic similarity due to long source descriptions vs concise extractions"
+    },
+    {
+      "query_id": 10,
+      "question": "Get Captain America's extraction validation report",
+      "expected_response": {
+        "character_id": "character_1787",
+        "character_name": "Captain America (Steven Rogers)",
+        "validation_passed": true,
+        "confidence_score": 1.0,
+        "completeness_score": 1.0,
+        "semantic_similarity_score": 0.58,
+        "overall_quality": 0.832,
+        "quality_tier": "HIGH",
+        "strengths": [
+          "High confidence extraction",
+          "Complete power origin data",
+          "All fields populated"
+        ],
+        "weaknesses": [
+          "Low semantic similarity: 0.58"
+        ],
+        "recommendations": [
+          "Review semantic similarity threshold",
+          "Extraction is high quality overall"
+        ]
+      }
+    },
+    {
+      "query_id": 11,
+      "question": "List all characters",
+      "expected_response": {
+        "total_characters": 3,
+        "limit": 10,
+        "offset": 0,
+        "characters": [
+          {
+            "node_id": "character_1678",
+            "name": "Spider-Man (Peter Parker)",
+            "alignment": "Good Characters",
+            "appearances": 4043.0
+          },
+          {
+            "node_id": "character_1787",
+            "name": "Captain America (Steven Rogers)",
+            "alignment": "Good Characters",
+            "appearances": 3360.0
+          },
+          {
+            "node_id": "character_1354",
+            "name": "Thor (Thor Odinson)",
+            "alignment": "Good Characters",
+            "appearances": 2402.0
+          }
+        ]
+      },
+      "validation_notes": "Should return paginated list with limit/offset support"
+    },
+    {
+      "query_id": 12,
+      "question": "List good-aligned characters",
+      "expected_response": {
+        "total_characters": 3,
+        "limit": 10,
+        "offset": 0,
+        "characters": [
+          {
+            "node_id": "character_1678",
+            "name": "Spider-Man (Peter Parker)",
+            "alignment": "Good Characters",
+            "appearances": 4043.0
+          },
+          {
+            "node_id": "character_1787",
+            "name": "Captain America (Steven Rogers)",
+            "alignment": "Good Characters",
+            "appearances": 3360.0
+          },
+          {
+            "node_id": "character_1354",
+            "name": "Thor (Thor Odinson)",
+            "alignment": "Good Characters",
+            "appearances": 2402.0
+          }
+        ]
+      },
+      "validation_notes": "All sample characters are Good-aligned, so results should match query 11"
+    },
+    {
+      "query_id": 13,
+      "question": "Get knowledge graph statistics",
+      "expected_response": {
+        "total_nodes": 23,
+        "total_edges": 31,
+        "nodes_by_type": {
+          "Character": 3,
+          "PowerOrigin": 3,
+          "Power": 11,
+          "Significance": 3,
+          "Validation": 3,
+          "Gene": 0,
+          "Team": 0
+        },
+        "relationships_by_type": {
+          "HAS_ORIGIN": 3,
+          "HAS_SIGNIFICANCE": 3,
+          "POSSESSES_POWER": 11,
+          "CONFERS": 11,
+          "EXTRACTION_VALIDATED": 3
+        },
+        "high_confidence_origins": 3,
+        "characters_with_origins": 3,
+        "origin_type_distribution": {
+          "accident": 1,
+          "technology": 1,
+          "birth": 1
+        },
+        "impact_level_distribution": {
+          "local": 1,
+          "global": 1,
+          "cosmic": 1
+        }
+      },
+      "validation_notes": "Numbers reflect sample dataset (3 characters: Spider-Man, Captain America, Thor)"
+    },
+    {
+      "query_id": 14,
+      "question": "Check API health status",
+      "expected_response": {
+        "status": "healthy",
+        "graph_loaded": true,
+        "total_nodes": 23,
+        "total_edges": 31,
+        "characters_count": 3,
+        "message": "API is operational"
+      },
+      "validation_notes": "Health check should confirm graph is loaded and operational"
+    },
+    {
+      "query_id": 15,
+      "question": "Re-validate Spider-Man extraction",
+      "expected_response": {
+        "character_id": "character_1678",
+        "character_name": "Spider-Man (Peter Parker)",
+        "validation_result": {
+          "is_valid": true,
+          "confidence_score": 1.0,
+          "completeness_score": 1.0,
+          "semantic_similarity_score": 0.54,
+          "consistency_score": null,
+          "validation_notes": []
+        },
+        "quality_assessment": {
+          "overall_quality": 0.815,
+          "quality_tier": "HIGH",
+          "strengths": [
+            "High confidence",
+            "Complete data"
+          ],
+          "weaknesses": [
+            "Low semantic similarity"
+          ]
+        },
+        "message": "Re-validation complete"
+      },
+      "validation_notes": "Re-validation should produce similar results to original validation"
+    }
+  ],
+  "response_schemas": {
+    "QuestionResponse": {
+      "question": "string",
+      "answer": "string",
+      "query_type": "enum (POWER_ORIGIN, SIGNIFICANCE, POWER_ABILITIES, etc.)",
+      "characters": "array of strings",
+      "confidence_level": "enum (HIGH, MEDIUM, LOW, UNKNOWN, N_A)",
+      "context_retrieved": "boolean"
+    },
+    "CharacterGraphResponse": {
+      "character": "CharacterNode object",
+      "power_origin": "PowerOriginNode object",
+      "powers": "array of PowerNode objects",
+      "significance": "SignificanceNode object",
+      "validation": "ValidationNode object (optional)"
+    },
+    "ExtractionReportResponse": {
+      "character_id": "string",
+      "character_name": "string",
+      "validation_passed": "boolean",
+      "confidence_score": "float (0-1)",
+      "completeness_score": "float (0-1)",
+      "semantic_similarity_score": "float (0-1, optional)",
+      "overall_quality": "float (0-1)",
+      "quality_tier": "enum (HIGH, MEDIUM, LOW)",
+      "strengths": "array of strings",
+      "weaknesses": "array of strings",
+      "recommendations": "array of strings"
+    },
+    "HealthResponse": {
+      "status": "string (healthy/unhealthy)",
+      "graph_loaded": "boolean",
+      "total_nodes": "integer",
+      "total_edges": "integer",
+      "characters_count": "integer",
+      "message": "string"
+    }
+  },
+  "notes": {
+    "semantic_similarity": "Scores may be lower (0.5-0.7) due to long source descriptions vs. concise extractions. This is expected and doesn't indicate poor quality.",
+    "quality_tiers": "HIGH (≥0.8), MEDIUM (0.6-0.8), LOW (<0.6)",
+    "confidence_levels": "HIGH (1.0), MEDIUM (0.66), LOW (0.33)",
+    "sample_data": "Responses reflect the sample dataset of 3 characters. Full dataset would have different statistics.",
+    "timestamps": "Actual responses may include timestamps and additional metadata not shown here"
+  }
+}

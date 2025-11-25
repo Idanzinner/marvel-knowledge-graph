@@ -1,0 +1,265 @@
+{
+  "description": "Sample queries for the Marvel Knowledge Graph API",
+  "version": "1.0",
+  "base_url": "http://localhost:8000",
+  "queries": [
+    {
+      "id": 1,
+      "category": "power_origin",
+      "query_type": "natural_language",
+      "question": "How did Spider-Man get his powers?",
+      "endpoint": "/question",
+      "method": "POST",
+      "request_body": {
+        "question": "How did Spider-Man get his powers?"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/question -H 'Content-Type: application/json' -d '{\"question\": \"How did Spider-Man get his powers?\"}'"
+    },
+    {
+      "id": 2,
+      "category": "power_origin",
+      "query_type": "natural_language",
+      "question": "How did Captain America get his powers?",
+      "endpoint": "/question",
+      "method": "POST",
+      "request_body": {
+        "question": "How did Captain America get his powers?"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/question -H 'Content-Type: application/json' -d '{\"question\": \"How did Captain America get his powers?\"}'"
+    },
+    {
+      "id": 3,
+      "category": "power_origin",
+      "query_type": "natural_language",
+      "question": "How did Thor get his powers?",
+      "endpoint": "/question",
+      "method": "POST",
+      "request_body": {
+        "question": "How did Thor get his powers?"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/question -H 'Content-Type: application/json' -d '{\"question\": \"How did Thor get his powers?\"}'"
+    },
+    {
+      "id": 4,
+      "category": "significance",
+      "query_type": "natural_language",
+      "question": "Why do Spider-Man's powers matter?",
+      "endpoint": "/question",
+      "method": "POST",
+      "request_body": {
+        "question": "Why do Spider-Man's powers matter?"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/question -H 'Content-Type: application/json' -d '{\"question\": \"Why do Spider-Man'\''s powers matter?\"}'"
+    },
+    {
+      "id": 5,
+      "category": "significance",
+      "query_type": "natural_language",
+      "question": "What makes Thor's powers significant?",
+      "endpoint": "/question",
+      "method": "POST",
+      "request_body": {
+        "question": "What makes Thor's powers significant?"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/question -H 'Content-Type: application/json' -d '{\"question\": \"What makes Thor'\''s powers significant?\"}'"
+    },
+    {
+      "id": 6,
+      "category": "character_graph",
+      "query_type": "graph_query",
+      "question": "Get Spider-Man's full character profile",
+      "endpoint": "/graph/Spider-Man (Peter Parker)",
+      "method": "GET",
+      "query_params": {
+        "search_by": "name"
+      },
+      "curl_example": "curl 'http://localhost:8000/graph/Spider-Man%20(Peter%20Parker)?search_by=name'"
+    },
+    {
+      "id": 7,
+      "category": "character_graph",
+      "query_type": "graph_query",
+      "question": "Get Captain America's full character profile",
+      "endpoint": "/graph/Captain America (Steven Rogers)",
+      "method": "GET",
+      "query_params": {
+        "search_by": "name"
+      },
+      "curl_example": "curl 'http://localhost:8000/graph/Captain%20America%20(Steven%20Rogers)?search_by=name'"
+    },
+    {
+      "id": 8,
+      "category": "character_graph",
+      "query_type": "graph_query",
+      "question": "Get Thor's full character profile",
+      "endpoint": "/graph/Thor (Thor Odinson)",
+      "method": "GET",
+      "query_params": {
+        "search_by": "name"
+      },
+      "curl_example": "curl 'http://localhost:8000/graph/Thor%20(Thor%20Odinson)?search_by=name'"
+    },
+    {
+      "id": 9,
+      "category": "validation",
+      "query_type": "extraction_report",
+      "question": "Get Spider-Man's extraction validation report",
+      "endpoint": "/extraction-report/Spider-Man (Peter Parker)",
+      "method": "GET",
+      "query_params": {
+        "search_by": "name"
+      },
+      "curl_example": "curl 'http://localhost:8000/extraction-report/Spider-Man%20(Peter%20Parker)?search_by=name'"
+    },
+    {
+      "id": 10,
+      "category": "validation",
+      "query_type": "extraction_report",
+      "question": "Get Captain America's extraction validation report",
+      "endpoint": "/extraction-report/Captain America (Steven Rogers)",
+      "method": "GET",
+      "query_params": {
+        "search_by": "name"
+      },
+      "curl_example": "curl 'http://localhost:8000/extraction-report/Captain%20America%20(Steven%20Rogers)?search_by=name'"
+    },
+    {
+      "id": 11,
+      "category": "list",
+      "query_type": "list_characters",
+      "question": "List all characters",
+      "endpoint": "/characters",
+      "method": "GET",
+      "query_params": {},
+      "curl_example": "curl 'http://localhost:8000/characters'"
+    },
+    {
+      "id": 12,
+      "category": "list",
+      "query_type": "list_characters",
+      "question": "List good-aligned characters",
+      "endpoint": "/characters",
+      "method": "GET",
+      "query_params": {
+        "alignment": "Good"
+      },
+      "curl_example": "curl 'http://localhost:8000/characters?alignment=Good'"
+    },
+    {
+      "id": 13,
+      "category": "statistics",
+      "query_type": "graph_stats",
+      "question": "Get knowledge graph statistics",
+      "endpoint": "/stats",
+      "method": "GET",
+      "curl_example": "curl 'http://localhost:8000/stats'"
+    },
+    {
+      "id": 14,
+      "category": "health",
+      "query_type": "health_check",
+      "question": "Check API health status",
+      "endpoint": "/health",
+      "method": "GET",
+      "curl_example": "curl 'http://localhost:8000/health'"
+    },
+    {
+      "id": 15,
+      "category": "validation",
+      "query_type": "re_validate",
+      "question": "Re-validate Spider-Man extraction",
+      "endpoint": "/validate-extraction",
+      "method": "POST",
+      "request_body": {
+        "character_identifier": "Spider-Man (Peter Parker)",
+        "search_by": "name"
+      },
+      "curl_example": "curl -X POST http://localhost:8000/validate-extraction -H 'Content-Type: application/json' -d '{\"character_identifier\": \"Spider-Man (Peter Parker)\", \"search_by\": \"name\"}'"
+    }
+  ],
+  "test_scenarios": [
+    {
+      "scenario_id": 1,
+      "name": "Complete Workflow Test",
+      "description": "Test the complete workflow from extraction to query",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Check API health",
+          "query_id": 14
+        },
+        {
+          "step": 2,
+          "action": "Get graph statistics",
+          "query_id": 13
+        },
+        {
+          "step": 3,
+          "action": "List all characters",
+          "query_id": 11
+        },
+        {
+          "step": 4,
+          "action": "Get Spider-Man's full profile",
+          "query_id": 6
+        },
+        {
+          "step": 5,
+          "action": "Ask about Spider-Man's power origin",
+          "query_id": 1
+        },
+        {
+          "step": 6,
+          "action": "Check extraction validation",
+          "query_id": 9
+        }
+      ]
+    },
+    {
+      "scenario_id": 2,
+      "name": "Multi-Character Comparison",
+      "description": "Compare power origins across multiple characters",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Spider-Man power origin",
+          "query_id": 1
+        },
+        {
+          "step": 2,
+          "action": "Captain America power origin",
+          "query_id": 2
+        },
+        {
+          "step": 3,
+          "action": "Thor power origin",
+          "query_id": 3
+        }
+      ]
+    },
+    {
+      "scenario_id": 3,
+      "name": "Validation Testing",
+      "description": "Test extraction validation features",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Get Spider-Man validation report",
+          "query_id": 9
+        },
+        {
+          "step": 2,
+          "action": "Re-validate Spider-Man",
+          "query_id": 15
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "authentication": "None (API is currently open)",
+    "rate_limiting": "None (unlimited requests)",
+    "base_url_production": "Update base_url for production deployment",
+    "character_names": "Character names are case-sensitive and should include full names with parentheses (e.g., 'Spider-Man (Peter Parker)')",
+    "search_by_options": ["name", "character_id"]
+  }
+}
