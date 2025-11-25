@@ -4,7 +4,7 @@
 **Project Name:** Marvel Knowledge Graph with LLM Integration
 **Repository:** https://github.com/Idanzinner/marvel-knowledge-graph
 **Submission Date:** November 25, 2025
-**Developer:** Hadas Zinner
+**Developer:** Idan Zinner
 
 ---
 
